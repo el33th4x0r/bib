@@ -1,0 +1,1198 @@
+%
+% Emin Gun Sirer
+%
+
+@include dates
+@include locations
+@include journals-cs
+@include conferences-cs
+@include workshops-cs
+
+@author{egs,	 name = "Emin {G\"un} Sirer"}
+@author{fbs,	 name = "Fred B. Schneider"}
+
+@author{rama,	 name = "Venugopalan Ramasubramanian"}
+@author{ryanp,	 name = "Ryan Peterson"}
+@author{bwong,	 name = "Bernard Wong"}
+@author{kwalsh,	 name = "Kevin Walsh"}
+@author{liuhz,	 name = "Hongzhou Liu"}
+@author{yeejiun, name = "Yee Jiun Song"}
+@author{slivkins,name = "Aleksandrs Slivkins"}
+
+@author{ivan,	name = "Ivan Stoyanov"}
+
+@inproceedings{cayleydc,
+  title = "On the Feasibility of Completely Wireless Datacenters",
+  author = "Ji Yong Shin and egs and Hakim Weatherspoon and Darko Kirovski",
+  booktitle = "Symposium on Architectures for Networking and Communications Systems",
+  year = 2012,
+  month = 10,
+  address = austin,
+  category = "Cloud Computing",
+  subcategory = "NoSQL",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/cayleydc.pdf",
+  abstract="Conventional datacenters, based on wired networks, entail high wiring costs, suﬀer from performance bottlenecks, and have low resilience to network failures. In this paper, we investigate a radically new methodology for building wire-free datacenters based on emerging 60GHz RF technology. We propose a novel rack design and a resulting network topology inspired by Cayley graphs that provide a dense interconnect. Our exploration of the resulting design space shows that wireless datacenters built with this methodology can potentially attain higher aggregate bandwidth, lower latency, and substantially higher fault tolerance than a conventional wired datacenter while improving ease of construction and maintenance."
+}
+
+@inproceedings{hyperdex,
+  title = "HyperDex: A Distributed, Searchable Key-Value Store.",
+  author = "Robert Escriva and Bernard Wong and egs",
+  booktitle = sigcomm,
+  year = 2012,
+  category = "Cloud Computing",
+  subcategory = "NoSQL",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/hyperdex-sigcomm.pdf",
+  abstract="Distributed key-value stores are now a standard component of high-performance web services and cloud computing applications. While key-value stores offer significant performance and scalability advantages compared to traditional databases, they achieve these properties through a restricted API that limits object retrieval|an object can only be retrieved by the (primary and only) key under which it was inserted. This paper presents HyperDex, a novel distributed key-value store that provides a unique search primitive that enables queries on secondary attributes. The key insight behind HyperDex is the concept of hyperspace hashing in which objects with multiple attributes are mapped into a multidimensional hyperspace. This mapping leads to efficient implementations not only for retrieval by primary key, but also for partially-specified secondary attribute searches and range queries. A novel chaining protocol enables the system to achieve strong consistency, maintain availability and guarantee fault tolerance. An evaluation of the full sys- tem shows that HyperDex is 12-13x faster than Cassandra and MongoDB for finding partially specified objects. Additionally, HyperDex achieves 2-4x higher throughput for get/put operations."
+}
+
+@article{hyperdex_login,
+  title = "An Introduction to HyperDex and the Brave New World of High Performance, Scalable, Consistent, Fault-tolerant Data Stores", 
+  author = "Robert Escriva and Bernard Wong and egs",
+  journal = login,
+  month = june,
+  year = 2012,
+  number = 37,
+  volume = 3,
+  pages = "39--49",
+  category = "Cloud Computing",
+  subcategory = "NoSQL",
+  html = "http://www.usenix.org/publications/login/june-2012-volume-37-number-3/introduction-hyperdex-and-brave-new-world-high",
+  abstract=""
+}
+
+@journal{toiss, shortname = "ACM TOISS", longname = "ACM Transactions on Information and System Security"}
+@conference{socc,
+  shortname = "SOCC",
+  longname = "Symposium on Cloud Computing",
+  [year=2011] address=Cascais, month=oct,
+}
+
+@inproceedings{swdc,
+  title = "Small World Data Centers",
+  author = "Ji Yong Shin and Bernard Wong and egs",
+  booktitle = socc,
+  address = Cascais,
+  year = 2011,
+  category = "Cloud Computing",
+  subcategory = "SWDC",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/swdc-socc.pdf",
+  abstract="In this paper, we propose an unorthodox topology for datacenters that eliminates all hierarchical switches in favor of connecting nodes at random according to a small-world inspired distribution. Specifically, we examine topologies where the underlying nodes are connected at the small scale in a regular pattern, such as a ring, torus or cube, such that every node can route efficiently to nodes in its immediate vicinity, and amended by the addition of random links to nodes throughout the datacenter, such that a greedy algorithm can route packets to far away locations efficiently. Coupled with geographical address assignment, the resulting network can provide content routing in addition to traditional routing, and thus efficiently implement key-value stores. The irregular but self-similar nature of the network facilitates constructing large networks easily using prewired, commodity racks. We show that Small-World Datacenters can achieve higher bandwidth and fault tolerance compared to both conventional hierarchical datacenters as well as the recently proposed CamCube topology. Coupled with hardware acceleration for packet switching, small-world datacenters can achieve an order of magnitude higher bandwidth than a conventional datacenter, depending on the network traffic."
+}
+
+@inproceedings{nexus,
+  title = "Logical Attestation: An Authorization Architecture for Trustworthy Computing",
+  author = "egs and Willem de Bruijn and Patrick Reynolds and Alan Shieh and Kevin Walsh and Dan Williams and Fred B. Schneider",
+  booktitle = sosp,
+  address = Cascais,
+  month = oct,
+  year = 2011,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/nexus-sosp.pdf",
+  abstract="This paper describes the design and implementation of a new operating system authorization architecture to support trustworthy computing. Called logical attestation, this architecture provides a sound framework for reasoning about run time behavior of applications. Logical attestation is based on attributable, unforgeable statements about program properties, expressed in a logic. These statements are suitable for mechanical processing, proof construction, and verification; they can serve as credentials, support authorization based on expressive authorization policies, and enable remote principals to trust software components without restricting the local user’s choice of binary implementations. We have implemented logical attestation in a new operating system called the Nexus. The Nexus executes natively on x86 platforms equipped with secure coprocessors. It supports both native Linux applications and uses logical attestation to support new trustworthy-computing applications. When deployed on a trustworthy cloud-computing stack, logical attestation is efficient, achieves high-performance, and can run applications that provide qualitative guarantees not possible with existing modes of attestation."
+}
+@inproceedings{vformation,
+  title = "A Content Propagation Metric for Efficient Content Distribution",
+  author = "Ryan S. Peterson and Bernard Wong and egs",
+  booktitle = sigcomm,
+  address = Toronto,
+  month = aug,
+  year = 2011,
+  category = "Peer-to-Peer",
+  subcategory = "Antfarm",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/vformation-sigcomm.pdf",
+  abstract="Efficient content distribution in large networks comprising datacenters, end hosts, and distributed in-network caches is a difficult problem. Existing systems rely on mechanisms and metrics that fail to effectively utilize all available sources of bandwidth in the network. This paper presents a novel metric, called the Content Propagation Metric (CPM), for quantitatively evaluating the marginal benefit of available bandwidth to competing consumers, enabling efficient utilization of the bandwidth resource. The metric is simple to implement, imposes only a modest overhead, and can be retrofitted easily into existing content distribution systems. We have designed and implemented a high-performance content distribution system, called V-Formation, based on the CPM. The CPM guides V-Formation toward a global allocation of bandwidth that maximizes the aggregate download bandwidth of consumers. Results from a PlanetLab deployment and extensive simulations show that V-Formation achieves high aggregate bandwidth and that the CPM enables hosts to converge quickly on a stable allocation ofresources in a wide range of deployment scenarios."
+}
+
+@inproceedings{netquery,
+  title = "NetQuery: A Knowledge Plane for Reasoning about Network Properties",
+  author = "Alan Shieh and egs and Fred B. Schneider",
+  booktitle = sigcomm,
+  address = Toronto,
+  month = aug,
+  year = 2011,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/netquery-sigcomm.pdf",
+  abstract="This paper presents the design and implementation of NetQuery, a knowledge plane for federated networks such as the Internet. In such networks, not all administrative domains will generate information that an application can trust and many administrative domains may have restrictive policies on disclosing network information. Thus, both the trustworthiness and accessibility of network information pose obstacles to effective reasoning. NetQuery employs trustworthy computing techniques to facilitate reasoning about the trustworthiness of information contained in the knowledge plane while preserving confidentiality guarantees for operator data. By characterizing information disclosure between operators, NetQuery enables remote verification of advertised claims and contractual stipulations; this enables new applications because network guarantees can span administrative boundaries. We have implemented NetQuery, built several NetQuery-enabled devices, and deployed applications for cloud datacenters, enterprise networks, and the Internet. Simulations, testbed experiments, and a deployment on a departmental network indicate NetQuery can support hundreds of thousands of operations per second and can thus scale to large ISPs."
+}
+ 
+@inproceedings{sidecar,
+  title = "Sidecar: Building programmable datacenter networks without programmable switches", 
+  author = "Alan Shieh and Srikanth Kandula and egs",
+  booktitle = hotnets,
+  location = Monterey,
+  month = oct,
+  year = 2010,
+  category = "Operating Systems",
+  subcategory = "Sidecar",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/sidecar-hotnets.pdf",
+  abstract = "This paper examines an extreme point in the design space of programmable switches and network policy enforcement. Rather than relying on extensive changes to switches to provide more programmability, SideCar distributes custom processing code between shims running on every end host and general purpose sidecar processors, such as server blades, connected to each switch via commonly available redirection mechanisms. This provides applications with pervasive network instrumentation and programmability on the forwarding plane. While not a perfect replacement for programmable switches, this solves several pressing problems while requiring little or no change to existing switches. In particular, in the context of public cloud data centers with thousands of tenants, we present novel solutions for multicast, controllable network bandwidth allocation (e.g., use-what-you-pay-for), and reachability isolation (e.g., a tenant\'s VM only sees other VMs of the tenant and shared services)."
+}
+
+@article{nal,
+  author = "Fred B. Schneider and Kevin Walsh and egs",
+  title = "Nexus Authorization Logic: Design Rationale and Applications",
+  journal = toiss,
+  volume = 14,
+  number = 1,
+  month = may,
+  year = 2011,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/nal-toiss.pdf",
+  abstract = "Nexus Authorization Logic (NAL) provides a principled basis for specifying and reasoning about credentials and authorization policies. It extends prior access control logics that are based on \'says\' and \'speaks for\' operators. NAL enables authorization of access requests to depend on (i) the source or pedigree of the requester, (ii) the outcome of any mechanized analysis of the requester, or (iii) the use of trusted software to encapsulate or modify the requester. To illustrate the convenience and expressive power of this approach to authorization, a suite of document-viewer applications was implemented to run on the Nexus operating system. One of the viewers enforces policies that concern the integrity of excerpts that a document contains; another viewer enforces confidentiality policies specified by labels tagging blocks of text.",
+}
+
+@inproceedings{blindfold,
+  title = "Blindfold: A System to See No Evil in Content Discovery",
+  author = "Ryan S. Peterson and Bernard Wong and egs",
+  booktitle = iptps,
+  address = SanJose,
+  month = apr,
+  year = 2010,
+  category = "Peer-to-Peer",
+  subcategory = "Antfarm",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/blindfold.pdf",
+  abstract = "Existing content aggregators provide fast and efficient access to large volumes of shared data and serve as critical centralized components of many peer-to-peer systems, including content discovery for BitTorrent. These aggregators\' operators are tasked to spend significant human resources to manually vet uploaded data to ensure compliance with copyright laws. This task does not scale with today's increasing demand for such services. In this paper, we introduce Blindfold, a scheme to ensure that the operators of content aggregators are completely blind to the content that they are storing and serving, thereby eliminating the possibility to censor content at the servers. It works by partitioning the search and upload operations into a series of dependent key-value operations across servers under different administrative domains, with the connection between servers obfuscated using captchas. We have implemented a prototype of Blindfold to show that it is a simple, feasible, and efficient system for serving content that is opaque to the storage servers."
+}  
+
+@inproceedings{antfarm,
+  title = "AntFarm: Efficient Content Distribution with Managed Swarms",
+  author = "Ryan Peterson and egs",
+  booktitle = nsdi,
+  address = Boston,
+  month = apr,
+  year = 2009,
+  category = "Peer-to-Peer",
+  subcategory = "Antfarm",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/antfarm.pdf",
+  abstract = "This paper describes Antfarm, a content distribution system based on managed swarms. A managed swarm couples peer-to-peer data exchange with a coordinator that directs bandwidth allocation at each peer. Antfarm achieves high throughput by viewing content distribution as a global optimization problem, where the goal is to minimize download latencies for participants subject to bandwidth constraints and swarm dynamics. The system is based on a wire protocol that enables the Antfarm coordinator to gather information on swarm dynamics, detect misbehaving hosts, and direct the peers' allotment of upload bandwidth among multiple swarms. Antfarm's coordinator grants autonomy and local optimization opportunities to participating nodes while guiding the swarms toward an efficient allocation of resources. Extensive simulations and a PlanetLab deployment show that the system can significantly outperform centralized distribution services as well as swarming systems such as BitTorrent."
+}
+
+@article{trickles_journal,
+  title = "A Stateless Approach to Connection-Oriented Protocols",
+  author = "Alan Shieh and Andrew C. Myers and egs",
+  journal = tocs,
+  month = sep,
+  year = 2008,
+  volume = 26,
+  number = 3,
+  category = "Operating Systems",
+  subcategory = "Trickles",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/trickles-tocs.pdf",
+  abstract = "Traditional operating system interfaces and network protocol implementations force some system state to be kept on both sides of a connection. This state ties the connection to its endpoints, impedes transparent failover, permits denial-of-service attacks, and limits scalability. This article introduces a novel TCP-like transport protocol and a new interface to replace sockets that together enable all state to be kept on one endpoint, allowing the other endpoint, typically the server, to operate without any per-connection state. Called Trickles, this approach enables servers to scale well with increasing numbers of clients, consume fewer resources, and better resist denial-of-service attacks. Measurements on a full implementation in Linux indicate that Trickles achieves performance comparable to TCP/IP, interacts well with other flows, and scales well. Trickles also enables qualitatively different kinds of networked services. Services can be geographically replicated and contacted through an anycast primitive for improved availability and performance. Widely-deployed practices that currently have client-observable side effects, such as periodic server reboots, connection redirection, and failover, can be made transparent, and perform well, under Trickles. The protocol is secure against tampering and replay attacks, and the client interface is backward-compatible, requiring no changes to sockets-based client applications.",
+}
+
+@inproceedings{ddrm,
+  title = "Device Driver Safety Through a Reference Validation Mechanism",
+  author = "Dan Williams and Patrick Reynolds and Kevin Walsh and egs and fbs",
+  booktitle = osdi,
+  address = SanDiego,
+  month = dec,
+  year = 2008,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/nexus-ddrm-tr.pdf",
+  abstract = "Device drivers typically execute in supervisor mode and thus must be fully trusted. This paper describes how to move them out of the trusted computing base, by running them without supervisor privileges and constraining their interactions with hardware devices. An implementation of this approach in the Nexus operating system executes drivers in user space, leveraging hardware isolation and subjecting them to reference validation. These Nexus drivers exhibit performance nearly as fast as earlier in-kernel, trusted drivers. For example, the monitored driver for an Intel e1000 Ethernet card has throughput comparable to a trusted driver for the same hardware under Linux. And a monitored driver for the Intel i810 sound card provides continuous playback. Drivers for a disk and a USB mouse have also been moved successfully to operate in Nexus user space with reference validation."
+}
+
+@techreport{cubittr,
+  title = "Approximate Matching for Peer-to-Peer Overlays with Cubit",
+  author = "Bernard Wong and Aleksandrs Slivkins and egs",
+  institution = "Cornell University, Computing and Information Science",
+  number = "",
+  address = Ithaca,
+  month = may,
+  year = 2008,
+  category = "Peer-to-Peer",
+  subcategory = "Cubit",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/cubit-tr.pdf",
+  abstract = "Keyword search is a critical component in most content retrieval systems. Despite the emergence of completely decentralized and efficient peer-to-peer techniques for content distribution, there have not been similarly efficient, accurate, and decentralized mechanisms for content discovery based on approximate search keys. In this paper, we present a scalable and efficient peer-to-peer system called Cubit with a new search primitive that can efficiently find the k data items with keys most similar to a given search key. The system works by creating a keyword metric space that encompasses both the nodes and the objects in the system, where the distance between two points is a measure of the similarity between the strings that the points represent. It provides a loosely-structured overlay that can efficiently navigate this space. We evaluate Cubit through both a real deployment as a search plugin for a popular BitTorrent client and a large-scale simulation and show that it provides an efficient, accurate and robust method to handle imprecise string search in filesharing applications."
+}
+
+@article{lesser_known_laws,
+  author = "Emin {G\"un} Sirer and Rik Farrow",
+  title = "Some Lesser Known Laws of Computer Science",
+  journal = login,
+  volume = 32,
+  number = 4,
+  pages = "25--28", 
+  address = NYC,
+  month = aug,
+  year = 2007,
+  category = "Misc",
+  subcategory = "Misc",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/lesser-known-laws.pdf",
+  abstract = "You've heard of Moore's Law. This paper points out some lesser-known exponential growth trends in computer science regarding power buttons, volume controls, pixel count, and sensor networking hardware, and makes some futuristic predictions."
+}
+  
+@inproceedings{egs_commongood,
+  author = "Ryan Peterson and Emin {G\"un} Sirer",
+  title = "Going Beyond Tit-for-Tat: Designing Peer-to-Peer Protocols for the Common Good",
+  booktitle = fudico,
+  year = 2007,
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/commongood.pdf",
+  category = "Peer-to-Peer",
+  subcategory = "Antfarm",
+  abstract = "Peer-to-peer systems, in which participants pool their resources to accomplish their goals, have become ubiquitous.  Since rational peers engage in strategic behavior, much past work has examined the design of mechanisms that incentivize peers to provide resources. The predominant design paradigm to date has been tit-for-tat, in which each peer benefits from every interaction. In this paper, we discuss the limitations of the tit-for-tat design paradigm and make the case for a new approach based on seeking the globally optimal outcome known as the common good.",
+}
+
+@inproceedings{ellama_hotos,
+  author = "Bernard Wong and Ymir Vigfusson and Emin {G\"un} Sirer",
+  title = "Hyperspaces for Object Clustering and Approximate Matching in Peer-to-Peer Overlays",
+  booktitle = hotos,
+  month = may,
+  year = 2007,
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/hyperspaces.pdf",
+  category = "Peer-to-Peer",
+  subcategory = "Cubit",
+  abstract = "Existing distributed hash tables provide efficient mechanisms for storing and retrieving a data item based on an exact key, but are unsuitable when the search key is similar, but not identical, to the key used to store the data item. In this paper, we present a scalable and efficient peerto-peer system with a new search primitive that can efficiently find the k data items with keys closest to the search key. The system works via a novel assignment of virtual coordinates to each object in a high-dimensional, synthetic space such that the proximity between two points in the coordinate space is correlated with the similarity between the strings that the points represent. We examine the feasibility of this approach for efficient, peer-to-peer search on inexact string keys, and show that the system provides a robust method to handle key perturbations that naturally occur in applications, such as file-sharing networks, where the query strings are provided by users.",
+}
+
+@inproceedings{octant_nsdi,
+  author = "Bernard Wong and Ivan Stoyanov and Emin {G\"un} Sirer",
+  title = "Octant: A Comprehensive Framework for the Geolocalization of Internet Hosts",
+  booktitle = nsdi,
+  month = apr,
+  year = 2007,
+  category = "Peer-to-Peer",
+  subcategory = "Meridian and Octant",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/octant-nsdi.pdf",
+  abstract = "Determining the physical location of Internet hosts is a critical enabler for many new location-aware services. In this paper, we present Octant, a novel, comprehensive framework for determining the location of Internet hosts in the real world based solely on network measurements. The key insight behind this framework is to pose the geolocalization problem formally as one of error-minimizing constraint satisfaction, to create a system of constraints by deriving them aggressively from network measurements, and to solve the system geometrically to yield the estimated region in which the target resides. This approach gains its accuracy and precision by taking advantage of both positive and negative constraints, that is, constraints on where the node can and cannot be, respectively. The constraints are represented using regions bounded by B{\'e}zier curves, allowing precise constraint representation and low-cost geometric operations. The framework can reason in the presence of uncertainty, enabling it to gracefully cope with aggressively derived constraints that may contain errors. An evaluation of Octant using PlanetLab nodes and public traceroute servers shows that Octant can localize the median node to within 22 mi., a factor of three better than other evaluated approaches.",
+}
+
+@inproceedings{sqrts,
+  author = "Kelvin So and Emin {G\"un} Sirer",
+  title = "Latency- and Bandwidth-Minimizing Optimal Failure Detectors",
+  booktitle = eurosys,
+  month = mar,
+  year = 2007,
+  category = "Peer-to-Peer",
+  subcategory = "Sqrt-S",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/sqrts.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/sqrts.pdf",
+  abstract = "Failure detectors are fundamental building blocks in distributed systems. Multi-node failure detectors, where the detector is tasked with monitoring  N other nodes, play a critical role in overlay networks and peer-to-peer systems. In such networks, failures need to be detected quickly and with low overhead. Achieving these properties simultaneously poses a difficult tradeoff between detection latency and resource consumption. 
+
+In this paper, we examine this central tradeoff, formalize it as an optimization problem and analytically derive the optimal closed form formulas for multi-node failure detectors. We provide two variants of the optimal solution for optimality metrics appropriate for two different deployment scenarios. Sqrt(s)-LM is a latency-minimizing optimal failure detector that achieves the lowest average failure detection latency given a fixed bandwidth constraint for system maintenance. Sqrt(s)-BM is a  bandwidth-minimizing optimal failure detector that meets a desired detection latency target with the least amount of bandwidth consumed. We evaluate our optimal results with node lifetimes chosen from bimodal and Pareto distributions, as well as real-world trace data from PlanetLab hosts, web sites and Microsoft PCs. Compared to standard failure detectors in wide use, sqrt-s failure detectors reduce failure detection latencies by 40\% on average for the same bandwidth consumption, or conversely, reduce the
+amount of bandwidth consumed by 30\% for the same failure detection latency.",
+}
+
+@techreport{nbgp,
+  title = "Securing BGP Using External Security Monitors",
+  author = "Patrick Reynolds and Oliver Kennedy and egs and Fred B. Schneider",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2006-2065",
+  address = Ithaca,
+  month = dec,
+  year = 2006,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/people/egs/papers/nbgp-tr.pdf",
+  abstract = "Security modifications to legacy network protocols are expensive and disruptive. This paper outlines an approach, based on external security monitors, for securing legacy protocols by deploying additional hosts that locally monitor the inputs and outputs of each host executing the protocol, check the behavior of the host against a safety specification, and communicate using an overlay to alert other hosts about invalid behavior and to initiate remedial actions. Trusted computing hardware provides the basis for trust in external security monitors. This paper applies this approach to secure the Border Gateway Protocol, yielding an external security monitor called N-BGP. N-BGP can accurately monitor a BGP router using commodity trusted computing hardware. Deploying N-BGP at a random 10\% of BGP routers is sufficient to guarantee the security of 80\% of Internet routes where both endpoints are monitored by N-BGP. Overall, external security monitors secure the routing infrastructure using trusted computing hardware and construct a security plane for BGP without having to modify the large base of installed routers and servers.",
+}
+
+@inproceedings{octant_worlds,
+  author = "Bernard Wong and Ivan Stoyanov and Emin {G\"un} Sirer", 
+  title = "Geolocalization on the Internet through Constraint Satisfaction",
+  booktitle = worlds,
+  address = Seattle,
+  month = nov,
+  year = 2006,
+  category = "Peer-to-Peer",
+  subcategory = "Meridian and Octant",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/octant-worlds.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/octant-worlds.pdf",
+  abstract = "This paper outlines a novel, comprehensive framework for geolocalization, that is, determining the physical location of Internet hosts based on network measurements. The core insight behind this framework is to pose the geolocalization problem formally as one of error-minimizing constraint satisfaction, to create a system of constraints by deriving them aggressively from network measurements, and to solve the system using cheap and accurate geometric methods. The framework is general and accommodates both positive and negative constraints, that is, constraints on where the node can or cannot be, respectively. It can reason in the presence of uncertainty, enabling it to gracefully cope with aggressively derived constraints that may contain errors. Since the solution space is represented geometrically as a region bounded by B{\'e}zier curves, the framework yields an accurate set of all points where the target may be located. Preliminary results on PlanetLab show promise; the framework can localize the median node to within 22 miles, a factor of three better than previous approaches, with little error.",
+}
+
+@article{corona_login,
+  title = "A Practical Approach to Peer-to-Peer Publish-Subscribe",
+  author = "Ryan Peterson and Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  journal = login,
+  volume = 31,
+  number = 4,
+  pages = "42--46", 
+  address = NYC,
+  month = jul,
+  year = 2006,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/corona-login.pdf",
+  abstract = "The web has failed to fulfill its promise of delivering relevant news and information in a timely fashion. In fact, it does not deliver anything on its own at all; instead, it requires its users to explicitly poll information sources. Checking for updates by pointing, clicking, and reloading Web sites, whether the sites are Slashdot, news, or online classifieds, is not only slow, inefficient, and cumbersome for users, but it places an unnecessary bandwidth burden on content providers. Recent attempts to automate this process, with the aid of feed readers, have created more problems than they have solved. A system that detects updates to content anywhere on the Web and delivers it to users via an asynchronous channel, such as an instant message, would do much to relieve the burden on users and content providers alike.", 
+}
+
+@inproceedings{credence,
+  title = "Experience with an Object Reputation System for Peer-to-Peer Filesharing",
+  author = "Kevin Walsh and Emin {G\"un} Sirer",
+  booktitle = nsdi,
+  address = SanJose,
+  month = may,
+  year = 2006,
+  category = "Peer-to-Peer",
+  subcategory = "Credence",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/credence.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/credence.pdf",
+  abstract = "In this paper, we describe Credence, a decentralized object reputation and ranking system for large-scale peer-to-peer filesharing networks. Credence counteracts pollution in these networks by allowing honest peers to assess the authenticity of online content through secure tabulation and management of endorsements from other peers. Our system enables peers to learn relationships even in the absence of direct observations or interactions through a novel, flow-based trust computation to discover trustworthy peers. We have deployed Credence as an overlay on top of the Gnutella filesharing network, with more than 10,000 downloads of our client software to date. We describe the system design, our experience with its deployment, and results from a long-term study of the trust network built by users. Data from the live deployment shows that Credence's flow-based trust computation enables users to avoid undesirable content. Honest Credence clients can identify three quarters of the decoys encountered when querying the Gnutella network.",
+}
+
+@inproceedings{corona,
+  title = "Corona: A High Performance Publish-Subscribe System for the World Wide Web",
+  author = "Venugopalan Ramasubramanian and Ryan Peterson and Emin {G\"un} Sirer",
+  booktitle = nsdi,
+  address = SanJose,
+  month = may,
+  year = 2006,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/corona.pdf",
+  abstract = "Despite the abundance of frequently changing information, the Web lacks a publish-subscribe interface for delivering updates to clients. The use of naive polling for detecting updates leads to poor performance and limited scalability as clients do not detect updates quickly and servers face high loads imposed by active polling. This paper describes a novel publish-subscribe system for the Web called Corona, which provides high performance and scalability through optimal resource allocation. Users register interest in Web pages through existing instant messaging services. Corona monitors the subscribedWeb pages, detects updates efficiently by allocating polling load among cooperating peers, and disseminates updates quickly to users. Allocation of resources for polling is driven by a distributed optimization engine that achieves the best update performance without exceeding load limits on content servers. Large-scale simulations and measurements from PlanetLab deployment demonstrate that Corona achieves orders of magnitude improvement in update performance at a modest cost.",
+}
+
+@article{heuristicsharmful,
+  title = "Heuristics Considered Harmful: Using Mathematical Optimization for Resource Management in Distributed Systems",
+  author = "Emin {G\"un} Sirer",
+  journal = ieeeis_selfstar,
+  volume = 21,
+  number = 2,
+  monthno = 3,
+  month = "Mar/Apr",
+  year = 2006,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/heuristics-harmful.pdf",
+}
+
+@article{closestnode,
+  title = "ClosestNode.com: An Open-Access, Scalable, Shared Geocast Service for Distributed Systems",
+  author = "Bernard Wong and Emin {G\"un} Sirer",
+  journal = osr,
+  volume = 40, 
+  number = 1, 
+  month = jan,
+  year = 2006,
+  category = "Peer-to-Peer",
+  subcategory = "Meridian and Octant",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/closestnode.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/closestnode.pdf",
+  abstract = "ClosestNode.com is an accurate, scalable, and backwards-compatible service for mapping clients to a nearby server. It provides a DNS interface by which unmodified clients can look up a service name, and get the IP address of the closest server. A shared system for performing such a mapping amortizes the administration and implementation costs of proximity-based server selection. It is aimed at minimizing the amount of effort required for system developers to make new and existing infrastructure services proximity-aware.",
+}
+
+@techreport{cobweb_tr,
+  title = "Optimal Resource Utilization in Content Distribution Networks",
+  author = "Yee Jiun Song and Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2005-2004", 
+  address = Ithaca,
+  month = nov,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/cobweb.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/cobweb.pdf",
+  abstract = "This paper examines replication in content distribution
+networks and proposes a novel mechanism for optimally
+resolving performance versus cost tradeoffs. The key insight
+behind our work is to formally and analytically
+capture the relationship between performance, bandwidth
+overhead and storage requirements for a web cache, express
+the system goals as a mathematical optimization
+problem, and solve for the optimal extent of replication
+that achieves the desired system goals with minimal
+overhead. We describe the design and implementation
+of a new content distribution network based on
+this concept, called CobWeb. CobWeb can achieve a target
+lookup latency while minimizing network and storage
+overhead, minimize access time while keeping bandwidth
+usage below a set limit, and alleviate flash crowd effects
+by rapidly replicating popular objects through fast
+and highly adaptive replica management. We outline the
+architecture of the CobWeb system, describe its novel optimization
+algorithm for intelligent resource allocation,
+and compare, through simulations and a physical deployment
+on PlanetLab, CobWeb\'s informed, analysis-driven
+replication strategy to existing approaches based on passive
+caching and heuristics.",
+}
+
+@inproceedings{egs_rss_study,
+  author = "Hongzhou Liu and Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  title = "A Measurement Study of RSS, A Publish-Subscribe System for Web Micronews",
+  booktitle = imc,
+  address = Berkeley,
+  month = oct,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/rsssurvey.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/rsssurvey.pdf",
+  abstract = " While publish-subscribe systems have attracted much research
+interest since the last decade, few established benchmarks
+have emerged, and there has been little characterization
+of how publish-subscribe systems are used in practice.
+This paper examines RSS, a newly emerging, widely
+used publish-subscribe system for Web micronews. Based
+on a trace study spanning 45 days at a medium-size academic
+department and periodic polling of approximately
+100,000 RSS feeds, we extract characteristics of RSS content
+and usage. We find that RSS workload resembles the
+Web in content size and popularity; feeds are typically
+small (less than 10KB), albeit with a heavy tail, and feed
+popularity follows a power law distribution. The update
+rate of RSS feeds is widely distributed; 55\% of RSS feeds
+are updated hourly, while 25\% show no updates for several
+days. And, only small portions of RSS content typically
+change during an update; 64\% of updates involve
+less than three lines of the RSS content. Overall, this paper
+presents an analysis of RSS, the first widely deployed
+publish-subscribe system, and provides insights for the design
+of next generation publish-subscribe systems.",
+}
+
+@inproceedings{egs_dnsperils,
+  author = "Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  title = "Perils of Transitive Trust in the Domain Name System",
+  booktitle = imc,
+  address = Berkeley,
+  month = oct,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/dnssurvey.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/dnssurvey.pdf",
+  abstract = "The Domain Name System, DNS, is based on nameserver delegations, which introduce complex and subtle dependencies between names and nameservers. In this paper, we present results from a large scale survey of DNS, and show that these dependencies lead to a highly insecure naming system. We report specifically on three aspects of DNS security: the properties of the DNS trusted computing base, the extent and impact of existing vulnerabilities in the DNS infrastructure, and the ease with which attacks against DNS can be launched. The survey shows that a typical name depends on 46 servers on average, whose compromise can lead to domain hijacks, while names belonging to some countries depend on a few hundred servers. An attacker exploiting well-documented vulnerabilities in DNS nameservers can hijack more than 30\% of the names appearing in the Yahoo and DMOZ.org directories. And certain nameservers, especially in educational institutions, control as much as 10\% of the namespace.",
+}
+
+@inproceedings{nexus_abstract,
+  title = "Nexus: A New Operating System for Trustworthy Computing",
+  author = "Alan Shieh and Dan Williams and Emin {G\"un} Sirer and Fred B. Schneider",
+  booktitle = "Symposium on Operating Systems Principles, Extended Abstract", 
+  address = "Brighton, United Kingdom", 
+  month = oct,
+  year = 2005,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/nexus-sosp-wip-abstract.pdf",
+}
+
+@inproceedings{credence_p2pecon, 
+  title = "Fighting Peer-to-Peer SPAM and Decoys with Object Reputation",
+  author = "Kevin Walsh and Emin {G\"un} Sirer",
+  booktitle = p2pecon,
+  address = Philadelphia,
+  month = aug,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Credence",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/credence-p2pecon.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/credence-p2pecon.pdf", 
+  abstract = "Peer-to-peer filesharing is now commonplace and its traffic now dominates bandwidth consumption at many Internet peering points. Recent studies indicate that much of this filesharing activity involves corrupt and polluted files. This paper describes Credence, a new object-based reputation system, and shows how it can counteract content pollution in peer-to-peer filesharing networks. Credence allows honest peers to assess the authenticity of online content by securely tabulating and managing endorsements from other peers. We employ a novel voter correlation scheme to weigh the opinions of peers, which gives rise to favorable incentives and system dynamics. We present simulation results indicating that our system is scalable, efficient, and robust.",
+}
+
+@inproceedings{meridian,
+  author = "Bernard Wong and Aleksandrs Slivkins and Emin {G\"un} Sirer",
+  title = "Meridian: A Lightweight Network Location Service without Virtual Coordinates",
+  booktitle = sigcomm,
+  address = Philadelphia,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Meridian and Octant",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/meridian-sigcomm05.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/meridian-sigcomm05.pdf",
+  abstract = "This paper introduces a lightweight, scalable and accurate framework, called Meridian, for performing node selection based on network location. The framework consists of an overlay network structured around multi-resolution rings, query routing with direct measurements, and gossip protocols for dissemination. We show how this framework can be used to address three commonly encountered problems, namely, closest node discovery, central leader election, and locating nodes that satisfy target latency constraints in largescale distributed systems without having to compute absolute coordinates. We show analytically that the framework is scalable with logarithmic convergence when Internet latencies are modeled as a growth-constrained metric, a low-dimensional Euclidean metric, or a metric of low doubling dimension. Large scale simulations, based on latency measurements from 6.25 million node-pairs as well as an implementation deployed on PlanetLab show that the framework is accurate and effective.",
+}
+
+@inproceedings{magnetos,
+  title = "Design and Implementation of a Single System Image Operating System for Ad Hoc Networks",
+  author = "Hongzhou Liu and Tom Roeder and Kevin Walsh and Rimon Barr and Emin {G\"un} Sirer",
+  booktitle = mobisys,
+  address = Seattle,
+  month = jun,
+  year = 2005,
+  category = "Ad hoc Networks",
+  subcategory = "MagnetOS",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/magnetos-mobisys.ps",
+  pdf ="http://www.cs.cornell.edu/People/egs/papers/magnetos-mobisys.pdf",
+  abstract = "In this paper, we describe the design and implementation of a distributed operating system for ad hoc networks. Our system simplifies the programming of ad hoc networks and extends total system lifetime by making the entire network appear as a single virtual machine. It automatically and transparently partitions applications into components and dynamically finds them a placement on nodes within the network to reduce energy consumption and to increase system longevity. This paper describes our programming model, outlines the design and implementation of our system and examines the energy efficiency of our approach through extensive simulations as well as validation of a deployment on a physical testbed. We evaluate practical, power-aware, general-purpose algorithms for component placement and migration, and demonstrate that they can significantly increase system longevity by effectively distributing energy consumption and avoiding hotspots.",
+}
+
+@techreport{meridian_tr_extended,
+  author = "Bernard Wong and Aleksandrs Slivkins and Emin {G\"un} Sirer",
+  title = "Meridian: A Lightweight Network Location Service without Virtual Coordinates (Extended)",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2005-1982",
+  address = Ithaca,
+  month = may,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Meridian and Octant",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/meridian-sigcomm05.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/meridian-sigcomm05.pdf",
+  abstract = "This paper introduces a lightweight, scalable and accurate framework,
+called Meridian, for performing node selection based on network
+location. The framework consists of an overlay network structured
+around multi-resolution rings, query routing with direct measurements,
+and gossip protocols for dissemination. We show how
+this framework can be used to address three commonly encountered
+problems, namely, closest node discovery, central leader election,
+and locating nodes that satisfy target latency constraints in largescale
+distributed systems without having to compute absolute coordinates.
+We show analytically that the framework is scalable with
+logarithmic convergence when Internet latencies are modeled as a
+growth-constrained metric, a low-dimensional Euclidean metric, or
+a metric of low doubling dimension. Large scale simulations, based
+on latency measurements from 6.25 million node-pairs as well as
+an implementation deployed on PlanetLab show that the framework
+is accurate and effective.",
+}
+
+@inproceedings{trickles,
+  title = "Trickles: A Stateless Network Stack for Improved Scalability, Resilience and Flexibility",
+  author = "Alan Shieh and Andrew Myers and Emin {G\"un} Sirer",
+  booktitle = nsdi,
+  address = Boston,
+  month = may,
+  year = 2005,
+  category = "Operating Systems",
+  subcategory = "Trickles",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/trickles-nsdi05.pdf",
+  abstract = "Traditional operating system interfaces and network protocol
+implementations force system state to be kept on
+both sides of a connection. Such state ties the connection
+to an endpoint, impedes transparent failover, permits
+denial-of-service attacks, and limits scalability. This
+paper introduces a novel TCP-like transport protocol
+and a new interface to replace sockets that together enable
+all state to be kept on one endpoint, allowing the
+other endpoint, typically the server, to operate without
+any per-connection state. Called Trickles, this approach
+enables servers to scale well with increasing numbers
+of clients, consume fewer resources, and better resist
+denial-of-service attacks. Measurements on a full implementation
+in Linux indicate that Trickles achieves performance
+comparable to TCP/IP, interacts well with other
+flows, and scales well. Trickles also enables qualitatively
+different kinds of networked services. Services
+can be geographically replicated and contacted through
+an anycast primitive for improved availability and performance.
+Widely-deployed practices that currently have
+client-observable side effects, such as periodic server reboots,
+connection redirection, and failover, can be made
+transparent, and perform well, under Trickles. The protocol
+is secure against tampering and replay attacks, and
+the client interface is backwards-compatible, requiring
+no changes to sockets-based client applications.",
+}
+
+@inproceedings{sextant,
+  title = "Sextant: A Unified Node and Event Localization Framework Using Non-Convex Constraints",
+  author = "Saikat Guha and Rohan Murty and Emin {G\"un} Sirer",
+  booktitle = mobihoc,
+  address = UrbanaChampaign,
+  month = may, 
+  year = 2005,
+  category = "Ad hoc Networks",
+  subcategory = "Sextant",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/sextant.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/sextant.pdf",
+  abstract = "Determining node and event locations is a canonical task for many
+wireless network applications. Yet dedicated infrastructure for determining
+position information is expensive, energy-consuming, and
+simply unavailable in many deployment scenarios. This paper presents
+an accurate, cheap and scalable framework, called Sextant,
+for determining node position and event location in sensor networks.
+Sextant operates by setting up and solving a system of
+geographic constraints based on connectivity information from the
+underlying communication network. Sextant achieves high accuracy
+by enabling non-convex constraints to be used to refine position
+estimates. It represents position estimates as potentially noncontiguous
+collections of points. This general representation enables
+Sextant to use negative information, that is, information on
+where a node or event is not located, to refine location estimates.
+Sextant unifies both node and event detection within the same general
+framework. It can provide high precision without dedicated
+localization hardware by aggressively extracting constraints from
+the link layer, representing areas precisely with B{\'e}zier-enclosed
+polygons and probability distributions, and using event detection
+to refine node position estimates. A compact representation and a
+fully distributed implementation make the framework practical for
+resource-limited devices. The framework has been implemented,
+deployed and tested on laptops, PDAs and Mica-2 motes. Physical
+experiments show that a large number (98\%) of the nodes in a network
+can determine their positions based on a small number (30\%)
+of landmark nodes and that a large number (90\%) of events can be
+located with low median error.",
+}
+
+@techreport{credence_tr,
+  title = "Thwarting Peer-to-Peer Pollution Using Object Reputation",
+  author = "Kevin Walsh and Emin {G\"un} Sirer",
+  institution = "Cornell University, Computer Science Department",
+  number = "TR2005-1980",
+  address = Ithaca,
+  month = feb,
+  year = 2005,
+  category = "Peer-to-Peer",
+  subcategory = "Credence",
+  ps = "http://www.cs.cornell.edu/People/egs/credence/credence-tr.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/credence/credence-tr.pdf",
+  abstract = "This paper describes Credence, a distributed object reputation
+management scheme for combating content pollution
+in peer-to-peer filesharing systems. Credence enables
+honest peers to assess the authenticity of online
+content by securely tabulating and managing endorsements
+from other peers. Credence employs a novel voter
+correlation scheme to weight peer opinions, which gives
+rise to favorable incentives and system dynamics. We
+present simulation results indicating that our system is
+scalable, efficient, and robust.",
+}
+
+@inproceedings{voltagescaling,
+  title = "A Rate-Matching Approach to Dynamic Voltage Scaling",
+  author = "David Biermann and Emin {G\"un} Sirer and Rajit Manohar",
+  booktitle = ibmwatson,
+  address = NYC,
+  month = oct,
+  year = 2004,
+  category = "Operating Systems",
+  subcategory = "Miscellaneous",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/voltagescaling.pdf",
+  abstract = "We present a simple rate matching-based mechanism for
+voltage adaptation in a microprocessor running a multiprogrammed
+workload. The mechanism incorporates
+a set of architecture and operating system extensions
+through which applications can communicate their actual
+and desired progress to the operating system. Using this
+feedback, the operating system uses a modified scheduling
+algorithm to run all applications at a single, globallyoptimal
+voltage. We demonstrate that significant energy
+savings are possible with a simple, practical set of extensions
+to the architecture and operating system.",
+}
+
+@inproceedings{herbivore,
+  title = "Eluding Carnivores: File Sharing with Strong Anonymity",
+  author = "Emin {G\"un} Sirer and Sharad Goel and Mark Robson and Dogan Engin",
+  booktitle = esigops,
+  address = Leuven,
+  month = sep, 
+  year = 2004,
+  category = "Peer-to-Peer",
+  subcategory = "Herbivore",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/herbivore-esigops.pdf",
+  abstract = "Anonymity is increasingly important for networked
+applications amidst concerns over censorship and
+privacy. This paper outlines the design of HerbivoreFS,
+a scalable and efficient file sharing system
+that provides strong anonymity. HerbivoreFS provides
+computational guarantees that even adversaries
+able to monitor all network traffic cannot deduce the
+identity of a sender or receiver beyond an anonymizing
+clique of k peers. HerbivoreFS achieves scalability
+by partitioning the global network into smaller
+anonymizing cliques. Measurements on PlanetLab
+indicate that the system achieves high anonymous
+bandwidth when deployed on the Internet.",
+}
+
+@inproceedings{codons,
+  author = "Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  title = "The Design and Implementation of a Next Generation Name Service for the Internet",
+  booktitle = sigcomm,
+  address = Portland,
+  month = aug,
+  year = 2004,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/codons-sigcomm.pdf",
+  abstract = "Name services are critical for mapping logical resource names to physical resources in large-scale distributed systems. The Domain Name System (DNS) used on the Internet, however, is slow, vulnerable to denial of service attacks, and does not support fast updates. These problems stem fundamentally from the structure of the legacy DNS. This paper describes the design and implementation of the Cooperative Domain Name System (CoDoNS), a novel name service, which provides high lookup performance through proactive caching, resilience to denial of service attacks through automatic load-balancing, and fast propagation of updates. CoDoNS derives its scalability, decentralization, self-organization, and failure resilience from peer-to-peer overlays, while it achieves high performance using the Beehive replication framework. Cryptographic delegation, instead of host-based physical delegation, limits potential malfeasance by namespace operators and creates a competitive market for namespace management. Backwards compatibility with existing protocols and wire formats enables CoDoNS to serve as a backup for legacy DNS, as well as a complete replacement. Performance measurements from a real-life deployment of the system in PlanetLab shows that CoDoNS provides fast lookups, automatically reconfigures around faults without manual involvement and thwarts distributed denial of service attacks by promptly redistributing load across nodes.",
+}
+
+@techreport{meridian_tr,
+  author = "Bernard Wong and Emin {G\"un} Sirer",
+  title = "A Lightweight Approach to Network Positioning",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2004-1949",
+  address = Ithaca,
+  month = aug,
+  year = 2004,
+  category = "Peer-to-Peer",
+  subcategory = "Meridian and Octant",
+}
+
+@inproceedings{hashtree_parameter_select,
+  title = "Optimal Parameter Selection for Efficient Memory Integrity Verification Using Merkle Hash Trees",
+  author = "Dan Williams and Emin {G\"un} Sirer",
+  booktitle = ncatnc,
+  address = Boston,
+  month = aug,
+  year = 2004,
+  category = "Operating Systems",
+  subcategory = "Nexus",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/hashtree.pdf",
+  abstract = "A secure, tamperproof execution environment is critical for trustworthy network computing. Newly emerging hardware, such as those developed as part of the TCPA and Palladium initiatives, enables operating systems to implement such an environment through Merkle hash trees. We examine the selection of optimal parameters, namely blocksize and tree depth, forMerkle hash trees based on the size of the memory region to be protected and the number of memory updates between updates of the hash tree. We analytically derive an expression for the cost of updating the hash tree, show that there is an optimal blocksize for the leaves of a Merkle tree for a given filesize and update interval that minimizes the cost of update operations, and describe a general method by which the parameters of such a tree can be determined optimally.",
+}
+
+@article{stagedsim,
+  title = "Staged Simulation: A General Technique for Improving Simulation Scale and Performance",
+  author = "Kevin Walsh and Emin {G\"un} Sirer",
+  journal = tomacs_scale,
+  volume = 14,
+  number = 2,
+  month = apr, 
+  year = 2004,
+  category = "Ad hoc Networks",
+  subcategory = "Staged Simulation",
+  ps = "http://www.cs.cornell.edu/People/egs/sns/sns-tomacs.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/sns/sns-tomacs.pdf",
+  abstract = "This paper describes staged simulation, a technique for improving the run time performance and scale of discrete event simulators. Typical network simulations are limited in speed and scale due to redundant computations, both within a single simulation run and between successive runs. Staged simulation proposes to restructure discrete event simulators to operate in stages that precompute, cache, and reuse partial results to drastically reduce redundant computation within and across simulations. We present a general and flexible framework for staging and identify the advantages and trade-offs of its application to wireless network simulations, a particularly challenging simulation domain. Experience with applying staged simulation to the ns2 simulator shows that staging can improve execution time by an order of magnitude or more and enable the simulation of wireless networks with tens of thousands of nodes.",
+}
+
+@inproceedings{beehive,
+  author = "Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  title = "Beehive:  0(1) Lookup Performance for Power-Law Query Distributions in Peer-to-Peer Overlays",
+  booktitle = nsdi,
+  address = SF,
+  month = mar,
+  year = 2004,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/beehive.pdf",
+  abstract = "Structured peer-to-peer hash tables provide decentralization, self-organization, failure-resilience, and good worst-case lookup performance for applications, but suffer from high latencies (O(logN)) in the average case. Such high latencies prohibit them from being used in many relevant, demanding applications such as DNS. In this paper, we present a proactive replication framework that can provide constant lookup performance for common Zipf-like query distributions. This framework is based around a closed-form optimal solution that achieves O(1) lookup performance with low storage requirements, bandwidth overhead and network load. Simulations show that this replication framework can realistically achieve good latencies, outperform passive caching, and adapt efficiently to sudden changes in object popularity, also known as flash crowds. This framework provides a feasible substrate for high-performance, low-latency applications, such as peer-to-peer domain name service.",
+}
+
+@inproceedings{corsso,
+  author = "William K. Josephson and Emin {G\"un} Sirer and Fred B. Schneider",
+  title = "Peer-to-Peer Authentication With a Distributed Single Sign-On Service",
+  booktitle = iptps,
+  year = 2004,
+  category = "Peer-to-Peer",
+  subcategory = "CorSSO",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/corsso-iptps04.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/corsso-iptps04.pdf",
+  abstract = "CorSSO is a distributed service for authentication in networks. It allows application servers to delegate client identity checking to combinations of authentication servers potentially residing in separate administrative domains. In CorSSO, authentication policies enable the system to tolerate expected classes of attacks and failures. A novel partitioning of the work associated with authentication of principals means that the system scales well with increases in the numbers of users and services.",
+}
+
+@techreport{beehive_tr,
+  title = "Proactive Caching for Better than Single-Hop Lookup Performance",
+  author = "Venugopalan Ramasubramanian and Emin {G\"un} Sirer",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2004-1931", 
+  address = Ithaca,
+  month = feb,
+  year = 2004,
+  category = "Peer-to-Peer",
+  subcategory = "Beehive, Honeycomb, CobWeb, Corona, CoDoNS",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/beehive-tr1931.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/beehive-tr1931.pdf",
+  abstract = "High lookup latencies prohibit peer-to-peer overlays from being used in many performance intensive applications, even though they provide self-organization, scalability, and failure resilience. In this paper, we show that lookup performance of structured DHTs can be improved to any desired constant, even under a single hop, by controlled proactive replication. By exploiting the popularity distribution of objects, we can minimize the number of replicas and reduce the storage and bandwidth cost of replication. This enables structured DHTs to efficiently support a wide variety of latency sensitive applications. We describe three different applications, namely DNS, web access, and content distribution, and show how they can derive significant performance gains by using DHTs.",
+}
+
+@inproceedings{stagedsim_wcs,
+  title = "Staged Simulation for Improving the Scale and Performance of Wireless Network Simulations",
+  author = "Kevin Walsh and Emin {G\"un} Sirer",
+  booktitle = "Winter Simulation Conference",
+  address = NewOrleans,
+  month = dec, 
+  year = 2003,
+  category = "Ad hoc Networks",
+  subcategory = "Staged Simulation",
+  pdf = "http://www.cs.cornell.edu/People/egs/sns/sns-wsc.pdf",
+  abstract = "This paper describes staged simulation, a technique for improving the run time performance and scale of discrete event simulators. Typical wireless network simulations are limited in speed and scale due to redundant computations, both within a single simulation run and between successive runs. Staged simulation proposes to reduce the amount of redundant computation within a simulation by restructuring discrete event simulators to operate in stages that precompute, cache, and reuse partial results. This paper presents a general and flexible framework for staging, and identifies the advantages and trade-offs of its application to wireless network simulations. Experience with applying staged simulation to the ns2 simulator shows that it can improve execution time by an order of magnitude in typical scenarios and make feasible the simulation of large scale wireless networks.",
+}
+
+@inproceedings{sharp,
+  title = "SHARP: A Hybrid Adaptive Routing Protocol for Mobile Ad Hoc Networks",
+  author =  "Venugopalan Ramasubramanian and Zygmunt J. Haas and Emin {G\"un} Sirer",
+  booktitle = mobihoc,
+  address = Annapolis,
+  month = jun,
+  year = 2003,
+  category = "Ad hoc Networks",
+  subcategory = "SHARP",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/sharp.pdf",
+  abstract = "A central challenge in ad hoc networks is the design of routing protocols that can adapt their behavior to frequent and rapid changes in the network. The performance of proactive and reactive routing protocols varies with network characteristics, and one protocol may outperform the other in different network conditions. The optimal routing strategy depends on the underlying network topology, rate of change, and traffic pattern, and varies dynamically. This paper introduces the Sharp Hybrid Adaptive Routing Protocol (SHARP), which automatically finds the balance point between proactive and reactive routing by adjusting the degree to which route information is propagated proactively versus the degree to which it needs to be discovered reactively. SHARP enables each node to use a different application-specific performance metric to control the adaptation of the routing layer. This paper describes application-specific protocols built on top of SHARP for minimizing packet overhead, bounding loss rate, and controlling jitter. Simulation studies show that the resulting protocols outperform the purely proactive and purely reactive protocols across a wide range of network characteristics.",
+}
+
+@inproceedings{karma,
+  title = "KARMA: A Secure Economic Framework for Peer-to-Peer Resource Sharing",
+  author = "Vivek Vishnumurthy and Sangeeth Chandrakumar and Emin {G\"un} Sirer",
+  booktitle = p2pecon,
+  address = Berkeley,
+  month = jun,
+  year = 2003,
+  category = "Peer-to-Peer",
+  subcategory = "Karma",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/karma.pdf",
+  abstract = "Peer-to-peer systems are typically designed around the assumption that all peers will willingly contribute resources to a global pool. They thus suffer from freeloaders, that is, participants who consume many more resources than they contribute. In this paper, we propose a general economic framework for avoiding freeloaders in peer-to-peer systems. Our system works by keeping track of the resource consumption and resource contribution of each participant. The overall standing of each participant in the system is represented by a single scalar value, called their karma. A set of nodes, called a bankset, keeps track of each node\'s karma, increasing it as resources are contributed, and decreasing it as they are consumed. Our framework is resistant to malicious attempts by the resource provider, consumer, and a fraction of the members of the bank set. We illustrate the application of this framework to a peer-to-peer filesharing application.",
+}
+
+@article{kimera_scp,
+  title = "Comprehensive Synchronization Elimination for Java",
+  author = "Jonathan Aldrich and Emin {G\"un} Sirer and Craig Chambers and Susan Eggers",
+  journal = scp,
+  volume= 47,
+  number = 2,
+  pages = "91--120", 
+  month = may,
+  year = 2003,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/csej.pdf",
+  abstract = "In this paper, we describe three novel analyses for eliminating unnecessary synchronization that remove over 70\% of dynamic synchronization operations on the majority of our 15 benchmarks and improve the bottom-line performance of three by 37-53\%. Our analyses attack three frequent forms of unnecessary synchronization: thread-local synchronization, reentrant synchronization, and enclosed lock synchronization. We motivate the design of our analyses with a study of the kinds of unnecessary synchronization found in a suite of single- and multithreaded benchmarks of different sizes and drawn from a variety of domains. We analyze the performance of our optimizations in terms of dynamic operations removed and run-time speedup. We also show that our analyses may enable the use of simpler synchronization models than the model found in Java, at little or no additional cost in execution time. The synchronization optimizations we describe enable programmers to design efficient, reusable and maintainable libraries and systems in Java without cumbersome manual code restructuring.",
+}
+
+@techreport{herbivore_tr,
+  title = "Herbivore: A Scalable and Efficient Protocol for Anonymous Communication",
+  author = "Sharad Goel and Mark Robson and Milo Polte and Emin {G\"un} Sirer",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2003-1890", 
+  address = Ithaca,
+  month = feb,
+  year = 2003,
+  category = "Peer-to-Peer",
+  subcategory = "Herbivore",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/herbivore-tr.pdf",
+  abstract = "Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. In this paper, we describe Herbivore, a peer-to-peer, scalable, tamper-resilient communication system that provides provable anonymity and privacy. Building on dining cryptographer networks, Herbivore scales by partitioning the network into anonymizing cliques. Adversaries able to monitor all network traffic cannot deduce the identity of a sender or receiver beyond an anonymizing clique. In addition to strong anonymity, Herbivore simultaneously provides high efficiency and scalability, distinguishing it from other anonymous communication protocols. Performance measurements from a prototype implementation show that the system can achieve high bandwidths and low latencies when deployed over the Internet."
+}
+
+@inproceedings{optxmit,
+  title = "On Selection of Optimal Transmission Power for Ad hoc Networks",
+  author = "Yurong Chen and Emin {G\"un} Sirer and Stephen B. Wicker",
+  booktitle = hicss,
+address = "Hawaii",
+  month = jan,
+  year = 2003,
+  category = "Ad hoc Networks",
+  subcategory = "Miscellaneous",
+}
+
+@inproceedings{pathset,
+  title = "Path-Set Selection in Mobile Ad Hoc Networks",
+  author = "Panagiotis Papadimitratos and Zygmunt Haas and Emin {G\"un} Sirer",
+  booktitle = mobihoc,
+  address = Lausanne,
+  month = jun, 
+  year = 2002,
+  category = "Ad hoc Networks",
+  subcategory = "Miscellaneous",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/dpsp.pdf",
+  abstract = "Topological changes in mobile ad hoc networks frequently render routing paths unusable. Such recurrent path failures have detrimental effects on the network ability to support QoS-driven services. A promising technique for addressing this problem is to use multiple redundant paths between the source and the destination. However, while multipath routing algorithms can tolerate network failures well, their failure resilience only holds if the paths are selected judiciously. In particular, the correlation between the failures of the paths in a redundant path set should be as small as possible. However, selecting an optimal path set is an NPcomplete problem. Heuristic solutions proposed in the literature are either too complex to be performed in real-time, or too ineffective, or both. This paper proposes a multipath routing algorithm, called Disjoint Pathset Selection Protocol (DPSP), based on a novel heuristic that, in nearly linear time on average, picks a set of highly reliable paths. The convergence to a highly reliable path set is very fast, and the protocol provides flexibility in path selection and routing algorithm. Furthermore, DPSP is suitable for real-time execution, with nearly no message exchange overhead and with minimal additional storage requirements. This paper presents evidence that multipath routing can mask a substantial number of failures in the network compared to single path routing protocols, and that the selection of paths according to DPSP can be beneficial for mobile ad hoc networks, since it dramatically reduces the rate of route discoveries.",
+}
+
+@inproceedings{webacl,
+  title = "An Access Control Language for Web Services",
+  author = "Emin {G\"un} Sirer and Ke Wang",
+  booktitle = sacmat,
+  address = Monterey,
+  month = jun,
+  year = 2002,
+  category = "Operating Systems",
+  subcategory = "Miscellaneous",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/sacmat02.pdf",
+  abstract = "This paper presents an approach for formally specifying and enforcing security policies on web service implementations. Networked services in general, and web services in particular, require extensive amounts of code to ensure that clients respect siteintegrity constraints. We provide a language by which these constraints can be expressed and enforced automatically, portably and efficiently. Security policies in our system are specified in a language based on temporal logic, and are processed by an enforcement engine to yield site and platform-specific access control code. This code is integrated with a web server and platform specific libraries to enforce the specified policy on a given web service. Our approach decouples the security policy specification from service implementations, provides a mandatory access control model for web services, and achieves good performance. We show that up to 22\% of the code in a traditional web service module is dedicated to security checking functionality, including checks for client sequencing and parameter validation. We show that our prototype language implementation, WebGuard, enables web programmers to significantly reduce the amount of security checking code they need to develop manually. The quality of the code generated by WebGuard from formal policy specifications is competitive with the latency of handcrafted code to within a few percent.",
+}
+
+@article{magnetos_motivation,
+  title = "On the Need for System-Level Support for Ad hoc and Sensor Networks",
+  author = "Rimon Barr and John C. Bicket and Daniel S. Dantas and Bowei Du and T.W. Danny Kim and Bing Zhou and Emin {G\"un} Sirer",
+  journal = osr,
+  volume = 36,
+  number = 2,
+  pages = "1--5", 
+  month = apr,
+  year = 2002,
+  category = "Ad hoc Networks",
+  subcategory = "MagnetOS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/magnetos-osr.pdf",
+  abstract = "Ad hoc and sensor networks are an important, emerging niche that is poorly supported by existing operating systems. In this paper, we argue that network-wide energy management is a primary concern in ad hoc networks, and that this functionality is best provided by a systems layer. We are currently designing and implementing a distributed, power-aware, adaptive operating system, called MagnetOS, specifically targeting ad hoc and sensor networks. MagnetOS provides a single system image of a unified Java virtual machine across the nodes that comprise an ad hoc network. By automatically and transparently partitioning applications into components and dynamically placing these components on nodes within the ad hoc network, our system reduces energy consumption, avoids hotspots and increases system longevity. We show that a systems approach to automatic object placement in an ad hoc network can increase system longevity by a factor of four to five.",
+}
+
+@inproceedings{portos,
+  title = "PortOS: An Educational Operating System for the Post-PC Environment",
+  author = "Benjamin Atkin and Emin {G\"un} Sirer",
+  booktitle = sigcse,
+  address = Cincinnati,
+  month = mar,
+  year = 2002,
+  category = "Operating Systems",
+  subcategory = "PortOS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/portos.pdf",
+  abstract = "In this paper, we describe PortOS, an educational operating system designed to complement undergraduate and graduate level classes on operating systems. PortOS is a complete user-level operating system project, with phases covering concurrency, synchronization, networking and file systems. It focuses particularly on ad-hoc and peer-to-peer distributed computing on mobile devices. This paper discusses alternative approaches to operating system projects, and presents our particular design point along with pedagogical justifications.",
+}
+
+%@phdthesis{egs_thesis,
+%  title = "Secure, Efficient and Manageable Virtual Machine Systems",
+%  author = "Emin {G\"un} Sirer",
+%  school = "University of Washington",
+%  year = 2002,
+%  category = "Operating Systems",
+%  subcategory = "Kimera",
+%}
+
+@techreport{cliquenet,
+  title = "CliqueNet: A Self-Organizing, Scalable, Peer-to-Peer Anonymous Communication Substrate",
+  author = "Emin {G\"un} Sirer and Milo Polte and Mark Robson",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2001", 
+  address = Ithaca,
+  month = nov,
+  year = 2001,
+  category = "Peer-to-Peer",
+  subcategory = "Herbivore",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/cliquenet-iptp.pdf",
+  abstract = "Anonymity is critical for many networked applications. Yet current Internet protocols provide no support for masking the identity of communication endpoints. This paper outlines a design for a peer-to-peer, scalable, tamper-resilient communication protocol that provides strong anonymity and privacy. Called CliqueNet, our protocol provides an information-theoretic guarantee: an omnipotent adversary that can wiretap at any location in the network cannot determine the sender of a packet beyond a clique, that is, a set of k hosts, where k is an anonymizing factor chosen by the participants. CliqueNet is resilient to jamming by malicious hosts and can scale with the number of participants. This paper motivates the need for an anonymous communication layer and describes the self-organizing, novel divide-and-conquer approach that enables CliqueNet to scale while offering a strong anonymity guarantee. CliqueNet is widely applicable as a communication substrate for peer-to-peer applications that require anonymity, privacy and anti-censorship guarantees.",
+}
+
+@techreport{magnetos_tr,
+  title = "Automatic Code Placement Alternatives for Ad Hoc and Sensor Networks",
+  author = "Emin {G\"un} Sirer and Rimon Barr and T.W. Danny Kim and Ian Yee Yan Fung",
+  institution = "Cornell University, Computing and Information Science",
+  number = "TR2001-1853", 
+  address = Ithaca,
+  month = oct,
+  year = 2001,
+  category = "Ad hoc Networks",
+  subcategory = "MagnetOS",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/magnetos-tr.pdf",
+  abstract = "Developing applications for ad-hoc and sensor networks poses significant challenges. Many interesting applications in these domains entail collaboration between components distributed throughout an ad-hoc network. Defining these components, optimally placing them on nodes in the ad-hoc network and relocating them in response to changes is a fundamental problem faced by such applications. Manual approaches to code and data migration are not only platform-dependent and error-prone, but also needlessly complicate application development. Further, locally optimal decisions made by applications that share the same network can lead to globally unstable and energy inefficient behavior. 
+
+In this paper we describe the design and implementation of a distributed operating system for adhoc and sensor networks whose goal is to enable power-aware, adaptive, and easy-to-develop adhoc networking applications. Our system achieves this goal by providing a single system image of a unified Java virtual machine to applications over an ad-hoc collection of heterogeneous nodes. It automatically and transparently partitions applications into components and dynamically finds a placement of these components on nodes within the ad-hoc network to reduce energy consumption and increase system longevity. This paper outlines the design of our system and evaluates two practical, power-aware, online algorithms for object placement that form the core of our system. We demonstrate that our algorithms can increase system longevity by a factor of four to five by effectively distributing energy consumption, and are suitable for use in an energy efficient operating system in which applications are distributed automatically and transparently.",
+}
+
+@inproceedings{kimera,
+  title = "Design and Implementation of a Distributed Virtual Machine for Networked Computers",
+  author = "Emin {G\"un} Sirer and Robert Grimm and Arthur J. Gregory and Brian N. Bershad",
+  booktitle = sosp,
+  address = KiawahIsland,
+  month = dec,
+  year = 1999,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-sosp99.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-sosp99.pdf",
+  abstract = "This paper describes the motivation, architecture and performance of a distributed virtual machine (DVM) for networked computers. DVMs rely on a distributed service architecture to meet the manageability, security and uniformity requirements of large, heterogeneous clusters of networked computers. In a DVM, system services, such as verification, security enforcement, compilation and optimization, are factored out of clients and located on powerful network servers. This partitioning of system functionality reduces resource requirements on network clients, improves site security through physical isolation and increases the manageability of a large and heterogeneous network without sacrificing performance. Our DVM implements the Java virtual machine, runs on x86 and DEC Alpha processors and supports existing Java-enabled clients.",
+}
+
+@inproceedings{kimera_star,
+  title = "Testing Java Virtual Machines",
+  author = "Emin {G\"un} Sirer and Brian N. Bershad",
+  booktitle = starconf,
+  address = SanJose,
+  month = nov,
+  year = 1999,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-starwest.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-starwest.pdf",
+  abstract = "The Java Virtual Machine (JVM) has emerged as a ubiquitous platform for network computing. JVMs have been incorporated into browsers, web servers, database engines, and personal digital assistants, and there are plans under way to use them on embedded devices and smartcards. The adoption of JVMs into such diverse and security critical domains requires that their safety and security be tested rigorously. Unfortunately, Java virtual machines are large, complex, and have many subtleties, and consequently testing them is a difficult task. Commercial virtual machines deployed so far have had to rely on manual and ad hoc techniques for testing, and have subsequently exhibited substantial weaknesses that could lead to information theft or destruction. In this paper, we describe our experience with automatically testing Java virtual machines. We outline two effective automatic testing techniques for JVMs. The first technique is comparative evaluation with mutations, where randomly perturbed test inputs are used to identify discrepancies between different versions of JVMs. We show that this fast and effective technique achieves broad code coverage, and discuss its shortcomings. Second, we present a well-structured technique for generating complex test cases from cogent grammar descriptions. We describe lava, a special purpose language we developed to specify production grammars for testing, and show that grammar-based test generation can produce very complex test cases from compact specifications. The testing process is easy to steer, and can generate targeted test cases. Most importantly, grammars enable the tester to reason about the expected system behavior on the test inputs. We show how grammars can be used in conjunction with inductive proofs to solve the oracle problem, and describe various application areas for grammar based testing. Finally, we report the results of applying these techniques to commercial Java virtual machine implementations.",
+}
+
+@inproceedings{kimera_dsl,
+  title = "Using Production Grammars in Software Testing",
+  author = "Emin {G\"un} Sirer and Brian N. Bershad",
+  booktitle = dsl,
+  address = Austin,
+  month = oct,
+  year = 1999,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-dsl99.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-dsl99.pdf",
+  abstract = "Extensible typesafe systems, such as Java, rely critically on a large and complex software base for their overall protection and integrity, and are therefore difficult to test and verify. Traditional testing techniques, such as manual test generation and formal verification, are too time consuming, expensive, and imprecise, or work only on abstract models of the implementation and are too simplistic. Consequently, commercial virtual machines deployed so far have exhibited numerous bugs and security holes. 
+
+In this paper, we discuss our experience with using production grammars in testing large, complex and safety-critical software systems. Specifically, we describe lava, a domain specific language we have developed for specifying production grammars, and relate our experience with using lava to generate effective test suites for the Java virtual machine. We demonstrate the effectiveness of production grammars in generating complex test cases that can, when combined with comparative and variant testing techniques, achieve high code and value coverage. We also describe an extension to production grammars that enables concurrent generation of certificates for test cases. A certificate is a behavioral description that specifies the intended outcome of the generated test case, and therefore acts as an oracle by which the correctness of the tested system can be evaluated in isolation. We report the results of applying these testing techniques to commercial Java implementations. We conclude that the use of production grammars in combination with other automated testing techniques is a powerful and effective method for testing software systems, and is enabled by a special purpose language for specifying extended production grammars."
+}
+
+@inproceedings{kimera_sas,
+  title = "Eliminating Unnecessary Synchronization from Java Programs",
+  author = "Jonathan Aldrich and Craig Chambers and Emin {G\"un} Sirer and Susan Eggers",
+  booktitle = sas,
+  address = Venice,
+  month = sep,
+  year = 1999,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-sas99.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-sas99.pdf",
+  abstract = "This paper presents and evaluates a set of analyses designed to reduce synchronization overhead in Java programs. Monitor-based synchronization in Java often causes significant overhead, accounting for 5-10\% of total execution time in our benchmark applications. To reduce this overhead, programmers often try to eliminate unnecessary lock operations by hand. Such manual optimizations are tedious, error-prone, and often result in poorly structured and less reusable programs. Our approach replaces manual optimizations with static analyses that automatically find and remove unnecessary synchronization from Java programs. These analyses optimize cases where a monitor is entered multiple times by a single thread, where one monitor is nested within another, and where a monitor is accessible by only one thread. A partial implementation of our analyses eliminates up to 70\% of synchronization overhead and improves running time by up to 5\% for several already hand-optimized benchmarks. Thus, our automated analyses have the potential to significantly improve the performance of Java applications while enabling programmers to design simpler and more reusable multithreaded code.",
+}
+
+@inproceedings{kimera_wcsss,
+  title = "A Practical Approach for Improving Startup Latency in Java Applications",
+  author = "Emin {G\"un} Sirer and Arthur J. Gregory and Brian N. Bershad",
+  booktitle = wcsss,
+  address = Atlanta,
+  month = may, 
+  year = 1999,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-wcsss99.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-wcsss99.pdf",
+  abstract = "In emerging application domains, such as thin client computing and hypertext systems with embedded objects (e.g. the World Wide Web), the process of downloading application code is in the critical path of users. We observe that in these domains, compliance with existing standards and minimizing the impact on the clients is crucial. We argue that the fundamental problem for mobile code is that the units of code distribution in networked object systems, such as Java, are not suited for efficient utilization of network bottlenecks. In this paper, we propose a separate optimization step, between compilation and loading, whereby application code is restructured to more effectively use the available network bandwidth for program download. We have designed and implemented such an optimization step as a binary rewriting service for Java applets and applications. Our implementation does not require any modifications to existing Java virtual machines, compilers or clients. We have found that restructuring of Java applications can improve program startup times by up to 30\%.",
+}
+
+@inproceedings{kimera_esigops,
+  title = "Distributed Virtual Machines: A System Architecture for Network Computing",
+  author = "Emin {G\"un} Sirer and Robert Grimm and Brian N. Bershad and Arthur J. Gregory and Sean McDirmid",
+  booktitle = esigops,
+  address = Sintra,
+  month = sep,
+  year = 1998,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-sigops98.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-sigops98.pdf",
+  abstract = "Modern virtual machines, such as Java and Inferno, are emerging as network computing platforms. While today's virtual machines provide higher-level abstractions and more sophisticated services than their predecessors, and while they have migrated from dedicated mainframes to heterogeneous networked computers, their architecture has essentially remained intact. State of the art virtual machines are still monolithic, that is, all system components reside on the same host and are replicated among all clients in an organization. This crude replication of services among clients creates problems of security, manageability, performance and scalability.
+
+We propose a distributed architecture for virtual machines based on distributed service components. In our proposed system, services that control security, resource management, and code optimization are factored out of clients and reside in enterprisewide network servers. The services produce self-certifying, self-regulating, selfoptimizing programs via binary rewriting. We are currently building a Java virtual machine based on this architecture. We argue that distributed virtual machine architectures enable higher integrity, manageability, performance and scalability than monolithic virtual machines where all components reside on all clients.",
+}
+
+@techreport{kimera_tr,
+  title =  "Improving the Security, Scalability, Manageability and Performance of System Services for Network Computing",
+  author = "Emin {G\"un} Sirer and Robert Grimm and Arthur J. Gregory and Nathan R. Anderson and Brian N. Bershad",
+  institution = "University of Washington", 
+  number = "UW-CSE-98-09-01", 
+  address = Seattle,
+  month = sep,
+  year = 1998,
+  category = "Operating Systems",
+  subcategory = "Kimera",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/kimera-tr98-09-01.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/kimera-tr98-09-01.pdf",
+  abstract = "Modern virtual machines, such as Java and Inferno, are emerging as network computing platforms. While these virtual machines provide higher-level abstractions and more sophisticated services than their predecessors from twenty years ago, their architecture has essentially remained unchanged. State of the art virtual machines are still monolithic, that is, they are comprised of closely-coupled service components, which are thus replicated over all computers in an organization. This crude replication of services forms one of the weakest points in today's networked systems, as it creates widely acknowledged and well-publicized problems of security, manageability and performance.
+
+We have designed and implemented a new system architecture for network computing based on distributed virtual machines. In our system, virtual machine services that perform rule checking and code transformation are factored out of clients and are located in enterprise-wide network servers. The services operate by intercepting application code and modifying it on the fly to provide additional service functionality. This architecture reduces client resource demands and the size of the trusted computing base, establishes physical isolation between virtual machine services and creates a single point of administration. We demonstrate that such a distributed virtual machine architecture can provide substantially better integrity and manageability than a monolithic architecture, scales well with increasing numbers of clients, and does not entail high overhead.",
+}
+
+@article{sysprogm3,
+  title = "Low-level Systems Programming with Modula-3",
+  author = "Marc E. Fiuczynski and Wilson Hsieh and Emin {G\"un} Sirer and Przemyslaw Pardyak and Brian N. Bershad",
+  journal = "Threads, Modula-3 Systems Journal", 
+  volume = 3, 
+  number = 4,
+  month = "Fall",
+  year = 1997,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  html = "http://www.m3.org/threads/3/index.html",
+}
+
+@techreport{strands,
+  title = "Strands: An Efficient and Extensible Thread Management Architecture",
+  author = "Emin {G\"un} Sirer and Przemyslaw Pardyak and Brian N. Bershad",
+  institution = "University of Washington", 
+  number = "UW-CSE-97-09-01", 
+  address = Seattle,
+  month = sep,
+  year = 1997,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps  = "http://www.cs.cornell.edu/People/egs/papers/spin-strands.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-strands.pdf",
+}
+
+@inproceedings{spin_wcsss2,
+  title = "Writing an Operating System Using Modula-3",
+  author = "Emin {G\"un} Sirer and Stefan Savage and Przemyslaw Pardyak and Greg DeFouw and Brian N. Bershad",
+  booktitle = wcsss,
+  address = Tucson,
+  month = feb,
+  year = 1996,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-strands.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-strands.pdf",
+}
+
+@inproceedings{spin_wcsss1,
+  title = "Safe Dynamic Linking in an Extensible Operating System",
+  author = "Emin {G\"un} Sirer and Marc Fiuczynski and Przemyslaw Pardyak and Brian N. Bershad",
+  booktitle = wcsss,
+  address = Tucson,
+  month = feb,
+  year = 1996,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-domains.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-domains.pdf",
+}
+
+@inproceedings{spin,
+  title = "Extensibility, Safety and Performance in the SPIN Operating System",
+  author = "Brian N. Bershad and Stefan Savage and Przemyslaw Pardyak and Emin {G\"un} Sirer and Marc Fiuczynski and David Becker and Craig Chambers and Susan Eggers",
+  booktitle = sosp,
+  address = CopperMountain,
+  month = dec,
+  year = 1995,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-sosp95.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-sosp95.pdf",
+  abstract = "This paper describes the motivation, architecture and performance of SPIN, an extensible operating system. SPIN provides an extension infrastructure, together with a core set of extensible services, that allow applications to safely change the operating system's interface and implementation. Extensions allow an application to specialize the underlying operating system in order to achieve a particular level of performance and functionality. SPIN uses language and link-time mechanisms to inexpensively export fine-grained interfaces to operating system services. Extensions are written in a type safe language, and are dynamically linked into the operating system kernel. This approach offers extensions rapid access to system services, while protecting the operating system code executing within the kernel address space. SPIN and its extensions are written in Modula-3 and run on DEC Alpha workstations.", 
+}
+
+@inproceedings{spin_protection,
+  title = "Protection is a Software Issue",
+  author = "Brian N. Bershad and Stefan Savage and Przemyslaw Pardyak and David Becker and Marc Fiuczynski and Emin {G\"un} Sirer",
+  booktitle = hotos,
+  address = OrcasIsland,
+  month = may,
+  year = 1995,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-hotos95.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-hotos95.pdf",
+}
+
+@article{spin_osr,
+  title = "SPIN - An Extensible Microkernel for Application-specific Operating System Services",
+  author = "Brian N. Bershad and Craig Chambers and Susan Eggers and Chris Maeda and Dylan McNamee and Przemyslaw Pardyak and Stefan Savage and Emin {G\"un} Sirer",
+  journal = osr,
+  volume = 29,
+  number = 1,
+  month = jan,
+  year = 1995,
+  pages = "74--77",
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-osr95.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-osr95.pdf",
+  abstract = "Application domains such asmultimedia, databases, and parallel computing, require operating system services with high performance and high functionality. Existing operating systems provide fixed interfaces and implementations to system services and resources. This makes them inappropriate for applications whose resource demands and usage patterns are poorly matched by the services provided. The SPIN operating system enables system services to be defined in an application-specific fashion through an extensible microkernel. It offers applications fine-grained control over a machine\'s logical and physical resources through run-time adaptation of the system to application requirements.", 
+}
+
+@inproceedings{spin_esigops,
+  title = "SPIN - An Extensible Microkernel for Application-specific Operating System Services",
+  author = "Brian N. Bershad and Craig Chambers and Susan Eggers and Chris Maeda and Dylan McNamee and Przemyslaw Pardyak and Stefan Savage and Emin {G\"un} Sirer",
+  booktitle = esigops,
+  address = Dagstuhl,
+  month = sep,
+  year = 1994,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-sigops94.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-sigops94.pdf",
+  abstract = "Application domains such asmultimedia, databases, and parallel computing, require operating system
+services with high performance and high functionality. Existing operating systems provide fixed interfaces
+and implementations to system services and resources. This makes them inappropriate for applications
+whose resource demands and usage patterns are poorly matched by the services provided. The SPIN
+operating system enables system services to be defined in an application-specific fashion through an
+extensible microkernel. It offers applications fine-grained control over a machine\'s logical and physical
+resources through run-time adaptation of the system to application requirements.",
+}
+
+@techreport{spin_tr,
+  title = "SPIN - An Extensible Microkernel for Application-specific Operating System Services",
+  author = "Brian N. Bershad and Craig Chambers and Susan Eggers and Chris Maeda and Dylan McNamee and Przemyslaw Pardyak and Stefan Savage and Emin {G\"un} Sirer",
+  institution = "University of Washington", 
+  number = "UW-CSE-94-03-03", 
+  address = Seattle,
+  month = mar,
+  year = 1994,
+  category = "Operating Systems",
+  subcategory = "SPIN",
+  ps = "http://www.cs.cornell.edu/People/egs/papers/spin-tr94-03-03.ps",
+  pdf = "http://www.cs.cornell.edu/People/egs/papers/spin-tr94-03-03.pdf",
+  abstract = "Application domains, such as multimedia, databases, and parallel computing, require operating system services with high performance and high functionality. Existing operating systems provide fixed interfaces and implementations to system services and resources. This makes them inappropriate for applications whose resource demands and usage patterns are poorlymatched by the services provided. The SPIN operating systemenables system services to be defined in an application-specific fashion through an extensible microkernel. It offers fine-grained control over a machine\'s logical and physical resources to applications through run-time adaptation of the system to application requirements.",
+}
