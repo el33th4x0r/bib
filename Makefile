@@ -1,55 +1,30 @@
-DEPS=egs.xtx Makefile massage
-TARGETS=pubs-default.html pubs-bytitle.html pubs-byauthor.html pubs-bycategory.html pubs-byproject.html pubs-byyear.html
+VIRTUAL=all
+DEPS=egs.xtx Makefile
+TARGETS=default byauthor bycategory byproject bytitle byyear
+XFLAGS=--style homepage --add-in --add-proceedings
 
-all: $(TARGETS)
+all: $(TARGETS:%=pubs-%.html)
 
 clean:
-	rm -f *~
-
-XFLAGS=--no-field pages --popups
+	rm -f *~ .egs.cache.xtx
 
 clobber: clean
-	rm -f $(TARGETS)
+	rm -f $(TARGETS:%=pubs-%.html)
 
 pubs-default.html: $(DEPS)
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year egs.xtx
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year egs.xtx
-	./massage egs.html
-	mv egs.html pubs-default.html
-	rm .haux
+	crosstex $(XFLAGS) --reverse-sort monthno --reverse-sort year --format html --output $@ $<
 
 pubs-byauthor.html: $(DEPS)
-	xtx2html $(XFLAGS) --sort author egs.xtx
-	xtx2html $(XFLAGS) --sort author egs.xtx
-	./massage egs.html
-	mv egs.html pubs-byauthor.html
-	rm .haux
+	crosstex $(XFLAGS) --sort author --format html --output $@ egs.xtx
 
 pubs-bytitle.html: $(DEPS)
-	xtx2html $(XFLAGS) --sort title egs.xtx
-	xtx2html $(XFLAGS) --sort title egs.xtx
-	./massage egs.html
-	mv egs.html pubs-bytitle.html
-	rm .haux
+	crosstex $(XFLAGS) --sort title --format html --output $@ egs.xtx
 
 pubs-byproject.html: $(DEPS)
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year --heading subcategory egs.xtx
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year --heading subcategory egs.xtx
-	./massage egs.html
-	mv egs.html pubs-byproject.html
-	rm .haux
+	crosstex $(XFLAGS) --reverse-sort monthno --reverse-sort year --heading subcategory --format html --output $@ egs.xtx
 
 pubs-bycategory.html: $(DEPS)
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year --reverse-heading category egs.xtx
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year --reverse-heading category egs.xtx
-	./massage egs.html
-	mv egs.html pubs-bycategory.html
-	rm .haux
+	crosstex $(XFLAGS) --reverse-sort monthno --reverse-sort year --heading category --format html --output $@ egs.xtx
 
 pubs-byyear.html: $(DEPS)
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year --reverse-heading year egs.xtx
-	xtx2html $(XFLAGS) --reverse-sort monthno --reverse-sort year --reverse-heading year egs.xtx
-	./massage egs.html
-	mv egs.html pubs-byyear.html
-	rm .haux
-
+	crosstex $(XFLAGS) --reverse-sort monthno --reverse-sort year --reverse-heading year --format html --output $@ egs.xtx
